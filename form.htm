@@ -177,41 +177,41 @@ table#t01 {
    外觀:<br>
   <input type="radio" name="眼外觀" value="正常" >正常
   <input type="radio" name="眼外觀" value="異常"> 異常
-  <input type="radio" name="眼外觀" value="_______"> _______<br> 
+  <input type="radio" name="眼外觀" value="其他">其他<br>  
   視力:<br>
    左眼  
   <input type="checkbox" name="左視力1" value="清晰"> 清晰
   <input type="checkbox" name="左視力2" value="老花">老花
   <input type="checkbox" name="左視力3" value="近(遠)視">近(遠)視
   <input type="checkbox" name="左視力4" value="白內障"> 白內障
-  <input type="checkbox" name="左視力5" value="其他"> 其他 _______<br>
+  <input type="checkbox" name="左視力5" value="其他"> 其他<br>
    右眼
   <input type="checkbox" name="右視力1" value="清晰"> 清晰
   <input type="checkbox" name="右視力2" value="老花">老花
   <input type="checkbox" name="右視力3" value="近(遠)視">近(遠)視
   <input type="checkbox" name="右視力4" value="白內障"> 白內障
-  <input type="checkbox" name="右視力5" value="其他"> 其他 _______<br>
+  <input type="checkbox" name="右視力5" value="其他"> 其他<br>
    </fieldset>
   
   <fieldset>
   <legend>耳</legend>
    外觀:<br>
   <input type="radio" name="耳外觀" value="正常">正常
-  <input type="radio" name="耳外觀" value="異常"> 異常
-  <input type="radio" name="耳外觀" value="_______"> _______<br> 
+  <input type="radio" name="耳外觀" value="異常">異常
+  <input type="radio" name="耳外觀" value="其他">其他<br> 
    聽力:<br>
  左耳
   <input type="checkbox" name="左聽力1" value="清晰"> 清晰
   <input type="checkbox" name="左聽力2" value="重聽">重聽
   <input type="checkbox" name="左聽力3" value="耳鳴">耳鳴
   <input type="checkbox" name="左聽力4" value="助聽器"> 助聽器
-  <input type="checkbox" name="左聽力5" value="其他"> 其他 _______<br>
+  <input type="checkbox" name="左聽力5" value="其他"> 其他<br>
    右耳
   <input type="checkbox" name="右聽力1" value="清晰"> 清晰
   <input type="checkbox" name="右聽力2" value="重聽">重聽
   <input type="checkbox" name="右聽力3" value="耳鳴">耳鳴
   <input type="checkbox" name="右聽力4" value="助聽器"> 助聽器
-  <input type="checkbox" name="右聽力5" value="其他"> 其他 _______<br>
+  <input type="checkbox" name="右聽力5" value="其他"> 其他<br>
    </fieldset>
    
    <fieldset>
@@ -219,7 +219,7 @@ table#t01 {
    外觀:<br>
   <input type="radio" name="鼻外觀" value="正常">正常
   <input type="radio" name="鼻外觀" value="異常"> 異常
-  <input type="radio" name="鼻外觀" value="_______"> _______<br> 
+  <input type="radio" name="鼻外觀" value="其他"> 其他<br>  
    </fieldset>
    
     <fieldset>
@@ -228,12 +228,12 @@ table#t01 {
  <input type="checkbox" name="黏膜1" value="正常"> 正常
   <input type="checkbox" name="黏膜2" value="破損">破損
   <input type="checkbox" name="黏膜3" value="潰傷">潰傷
-  <input type="checkbox" name="黏膜4" value="其他"> 其他 _______<br>
+  <input type="checkbox" name="黏膜4" value="其他"> 其他 <br>
   輔助物:<br>
   <input type="radio" name="輔助物" value="無">無
   <input type="radio" name="輔助物" value="固定假牙">固定假牙
   <input type="radio" name="輔助物" value="活動假牙">活動假牙
-  <input type="radio" name="輔助物" value="其他"> 其他 _______<br>
+  <input type="radio" name="輔助物" value="其他"> 其他 <br>
   </fieldset>
   
   <fieldset>
@@ -241,7 +241,7 @@ table#t01 {
    外觀:<br>
   <input type="radio" name="頸外觀" value="正常">正常
   <input type="radio" name="頸外觀" value="異常"> 異常
-  <input type="radio" name="頸外觀" value="_______"> _______<br>
+  <input type="radio" name="頸外觀" value="其他"> 其他
    </fieldset>
 
   <fieldset>
@@ -284,12 +284,102 @@ table#t01 {
     <option value="右腳踝">
     <option value="左腳掌">
     <option value="右腳掌">
-    
+    </datalist>
+    症狀:
   <input type="checkbox" name="皮膚外貌1" value="正常"> 正常
   <input type="checkbox" name="皮膚外貌2" value="乾燥">蒼白
   <input type="checkbox" name="皮膚外貌3" value="潮紅">黃疸
   <input type="checkbox" name="皮膚外貌4" value="淤斑">淤斑
-  <input type="checkbox" name="黏膜4" value="其他"> 其他 _______<br>
+  <input type="checkbox" name="黏膜4" value="其他"> 其他<br> 
+  部位:
+   <input list="皮膚外貌部位1" name="皮膚外貌部位1">
+  <datalist id="皮膚外貌部位1">
+    <option value="頭">
+    <option value="頸">
+    <option value="面">
+    <option value="背">
+    <option value="腰">
+    <option value="左臀">
+    <option value="右臀">
+    <option value="左胸">
+    <option value="右胸">
+    <option value="左腹">
+    <option value="右腹">    
+    <option value="左肩">
+    <option value="右肩">
+    <option value="左上臂">
+    <option value="右上臂">
+    <option value="左手肘">
+    <option value="右手肘">
+    <option value="左前臂">
+    <option value="右前臂">
+    <option value="左手腕">
+    <option value="右手腕">
+    <option value="左手">
+    <option value="右手">
+    <option value="左大腿">
+    <option value="右大腿">
+    <option value="左膝">
+    <option value="右膝">
+    <option value="左小腿">
+    <option value="右小腿">
+    <option value="左腳踝">
+    <option value="右腳踝">
+    <option value="左腳掌">
+    <option value="右腳掌">
+    </datalist>
+    症狀:
+  <input type="checkbox" name="皮膚外貌1" value="正常"> 正常
+  <input type="checkbox" name="皮膚外貌2" value="乾燥">蒼白
+  <input type="checkbox" name="皮膚外貌3" value="潮紅">黃疸
+  <input type="checkbox" name="皮膚外貌4" value="淤斑">淤斑
+  <input type="checkbox" name="黏膜4" value="其他"> 其他<br> 
+部位:
+   <input list="皮膚外貌部位1" name="皮膚外貌部位1">
+  <datalist id="皮膚外貌部位1">
+    <option value="頭">
+    <option value="頸">
+    <option value="面">
+    <option value="背">
+    <option value="腰">
+    <option value="左臀">
+    <option value="右臀">
+    <option value="左胸">
+    <option value="右胸">
+    <option value="左腹">
+    <option value="右腹">    
+    <option value="左肩">
+    <option value="右肩">
+    <option value="左上臂">
+    <option value="右上臂">
+    <option value="左手肘">
+    <option value="右手肘">
+    <option value="左前臂">
+    <option value="右前臂">
+    <option value="左手腕">
+    <option value="右手腕">
+    <option value="左手">
+    <option value="右手">
+    <option value="左大腿">
+    <option value="右大腿">
+    <option value="左膝">
+    <option value="右膝">
+    <option value="左小腿">
+    <option value="右小腿">
+    <option value="左腳踝">
+    <option value="右腳踝">
+    <option value="左腳掌">
+    <option value="右腳掌">
+    </datalist>
+    症狀:
+  <input type="checkbox" name="皮膚外貌1" value="正常"> 正常
+  <input type="checkbox" name="皮膚外貌2" value="乾燥">蒼白
+  <input type="checkbox" name="皮膚外貌3" value="潮紅">黃疸
+  <input type="checkbox" name="皮膚外貌4" value="淤斑">淤斑
+  <input type="checkbox" name="黏膜4" value="其他"> 其他<br>  
+  
+  
+  
   皮膚完整:<br>
   部位:
    <input list="皮膚完整部位1" name="皮膚完整部位1">
@@ -327,12 +417,112 @@ table#t01 {
     <option value="右腳踝">
     <option value="左腳掌">
     <option value="右腳掌">
+  </datalist>
+    症狀:
+  <input type="checkbox" name="皮膚完整1" value="完整">完整
+  <input type="checkbox" name="皮膚完整2" value="紅疹">紅疹
+  <input type="checkbox" name="皮膚完整3" value="腫脹">腫脹
+  <input type="checkbox" name="皮膚完整4" value="水泡">水泡
+  <input type="checkbox" name="皮膚完整5" value="破皮">破皮 
+  <input type="checkbox" name="皮膚完整3" value="傷口">傷口
+  <input type="checkbox" name="皮膚完整4" value="壞死">壞死
+  <input type="checkbox" name="皮膚完整5" value="壓瘡">壓瘡
+  <input type="checkbox" name="黏膜4" value="其他"> 其他<br>
+  部位:
+   <input list="皮膚完整部位1" name="皮膚完整部位1">
+  <datalist id="皮膚完整部位1">
+    <option value="頭">
+    <option value="頸">
+    <option value="面">
+    <option value="背">
+    <option value="腰">
+    <option value="左臀">
+    <option value="右臀">
+    <option value="左胸">
+    <option value="右胸">
+    <option value="左腹">
+    <option value="右腹">    
+    <option value="左肩">
+    <option value="右肩">
+    <option value="左上臂">
+    <option value="右上臂">
+    <option value="左手肘">
+    <option value="右手肘">
+    <option value="左前臂">
+    <option value="右前臂">
+    <option value="左手腕">
+    <option value="右手腕">
+    <option value="左手">
+    <option value="右手">
+    <option value="左大腿">
+    <option value="右大腿">
+    <option value="左膝">
+    <option value="右膝">
+    <option value="左小腿">
+    <option value="右小腿">
+    <option value="左腳踝">
+    <option value="右腳踝">
+    <option value="左腳掌">
+    <option value="右腳掌">
+  </datalist>
+    症狀:
+  <input type="checkbox" name="皮膚完整1" value="完整">完整
+  <input type="checkbox" name="皮膚完整2" value="紅疹">紅疹
+  <input type="checkbox" name="皮膚完整3" value="腫脹">腫脹
+  <input type="checkbox" name="皮膚完整4" value="水泡">水泡
+  <input type="checkbox" name="皮膚完整5" value="破皮">破皮 
+  <input type="checkbox" name="皮膚完整3" value="傷口">傷口
+  <input type="checkbox" name="皮膚完整4" value="壞死">壞死
+  <input type="checkbox" name="皮膚完整5" value="壓瘡">壓瘡
+  <input type="checkbox" name="黏膜4" value="其他"> 其他<br>
+  部位:
+   <input list="皮膚完整部位1" name="皮膚完整部位1">
+  <datalist id="皮膚完整部位1">
+    <option value="頭">
+    <option value="頸">
+    <option value="面">
+    <option value="背">
+    <option value="腰">
+    <option value="左臀">
+    <option value="右臀">
+    <option value="左胸">
+    <option value="右胸">
+    <option value="左腹">
+    <option value="右腹">    
+    <option value="左肩">
+    <option value="右肩">
+    <option value="左上臂">
+    <option value="右上臂">
+    <option value="左手肘">
+    <option value="右手肘">
+    <option value="左前臂">
+    <option value="右前臂">
+    <option value="左手腕">
+    <option value="右手腕">
+    <option value="左手">
+    <option value="右手">
+    <option value="左大腿">
+    <option value="右大腿">
+    <option value="左膝">
+    <option value="右膝">
+    <option value="左小腿">
+    <option value="右小腿">
+    <option value="左腳踝">
+    <option value="右腳踝">
+    <option value="左腳掌">
+    <option value="右腳掌">
+  </datalist>
+    症狀:
+  <input type="checkbox" name="皮膚完整1" value="完整">完整
+  <input type="checkbox" name="皮膚完整2" value="紅疹">紅疹
+  <input type="checkbox" name="皮膚完整3" value="腫脹">腫脹
+  <input type="checkbox" name="皮膚完整4" value="水泡">水泡
+  <input type="checkbox" name="皮膚完整5" value="破皮">破皮 
+  <input type="checkbox" name="皮膚完整3" value="傷口">傷口
+  <input type="checkbox" name="皮膚完整4" value="壞死">壞死
+  <input type="checkbox" name="皮膚完整5" value="壓瘡">壓瘡
+  <input type="checkbox" name="黏膜4" value="其他"> 其他<br>
   
-  <input type="checkbox" name="黏膜1" value="正常"> 正常
-  <input type="checkbox" name="黏膜2" value="破損">破損
-  <input type="checkbox" name="黏膜3" value="潰傷">潰傷
-  <input type="checkbox" name="黏膜4" value="其他"> 其他 _______<br>
-   
    </fieldset>
 
    <button type="submit" value="sssss" style="height: 29px; width: 103px">送出</button>
