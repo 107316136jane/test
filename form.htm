@@ -40,16 +40,26 @@ table#t01 {
     </th> 
   </tr>
   <tr>
-    <td>日期:<input type="text"  name="name" size="10">
+    <td>日期:<input type="text"  name="name" size="10"><br>
+    時間:<input type="text"  name="name" size="10">
     </td>
-    <td>病歷號碼:<input type="text"  name="name" size="10">
+    <td>病歷號碼:<input type="text"  name="name" size="10"><br>
+    床號:<input type="text"  name="name" size="10">
     </td>
   </tr>
   <tr>
-    <td>時間:<input type="text"  name="name" size="10">
-    </td>
-    <td>床號:<input type="text"  name="name" size="10">
-    年齡:<input type="text"  name="name" size="10">
+    <td>電話:<input type="text"  name="name" size="10"><br>
+    地址:<input type="text"  name="name" size="10"></td>
+    <td>
+    生日:
+    <form action="/action_page.php">
+出生於1980-01-01之前:
+<input type="date" name="bday" max="1979-12-31"><br>
+
+出生於2000-01-01之後:
+<input type="date" name="bday" min="2000-01-02"><br>
+<input type="submit"> 
+</form>
     </td>
   </tr>
 </table>
@@ -132,6 +142,12 @@ table#t01 {
    <button type="submit" value="sssss" style="height: 29px; width: 103px">送出</button>
   
    </form>
-    
+       
+        
+       
+
+
+
+
  </body>
 </html>
