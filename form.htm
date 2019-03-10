@@ -3,7 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>Form example</title>
- 
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+</style>
 </head>
 <body ">
 
@@ -11,12 +24,36 @@
      
         <h2>入院護理評估單</h2>
         <h3>身體評估單</h3>
+</table>
+<br>
+<table id="t01">
+  <tr>
+    <th>
+        護理人員:<input type="text"  name="name" size="10"><br>
 
-        <br>
-        姓名:<input type="text"  name="name" size="8"><br>
-        <br>
-        電話:<input type="text"  name="TEL" size="20"><br />
-        <br>
+    </th>
+    <th>
+    姓名:<input type="text"  name="name" size="10">
+    
+    <input type="radio" name="性別" value="男" >男
+  <input type="radio" name="性別" value="女">女
+    </th> 
+  </tr>
+  <tr>
+    <td>日期:<input type="text"  name="name" size="10">
+    </td>
+    <td>病歷號碼:<input type="text"  name="name" size="10">
+    </td>
+  </tr>
+  <tr>
+    <td>時間:<input type="text"  name="name" size="10">
+    </td>
+    <td>床號:<input type="text"  name="name" size="10">
+    年齡:<input type="text"  name="name" size="10">
+    </td>
+  </tr>
+</table>
+
     <form action="/action_page.php">
   
    <fieldset>
@@ -95,12 +132,6 @@
    <button type="submit" value="sssss" style="height: 29px; width: 103px">送出</button>
   
    </form>
-       
-        
-       
-
-
-
-
+    
  </body>
 </html>
