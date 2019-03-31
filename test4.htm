@@ -1,0 +1,985 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form example</title>
+    <style>
+
+        table, th, td {
+            border: 0px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        table#t01 {
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+    </style>
+</head>
+<body onload="Button5_onclick() ">
+    <script language="javascript" type="text/javascript">function Button1_onclick() {
+
+            var a = document.getElementById("j01").value;
+            var b = document.getElementById("j02").value;
+            var c = document.getElementById("j03").value;
+            if (a == "") {
+                alert("你尚未填寫護理人員姓名");
+            }
+            if (b == "") {
+                alert("你尚未填寫姓名");
+            }
+            if (isNaN(c)) {
+                alert("電話不是數字");
+
+            }
+
+
+        }
+
+        function Button2_onclick() {
+            var patient = { "name": "Chalmers", "telecom": 12345678, "gender": "male", "birthDate": "1974-12-25" };
+            document.getElementById("j02").value = patient.name;
+            document.getElementById("j03").value = patient.telecom;
+            document.getElementById("j04").value = patient.birthDate;
+            var d = document.getElementsByName("性別");
+            for (var i = 0; i < d.length; i++) {
+                if (d[i].value == patient.gender) {
+                    d[i].checked = true;
+                }
+                else {
+                    d[i].checked = false;
+                }
+
+            }
+        }
+        function Button3_onclick() {
+            var a = document.getElementById("j02").value;
+            var b = document.getElementById("j03").value;
+            var c = document.getElementById("j04").value;
+            var d;
+            var z = document.getElementsByName("性別");
+            for (var i = 0; i < z.length; i++) {
+                if (z[i].checked == true) {
+                    d = z[i].value;
+                }
+            }
+            alert("姓名:" + a + ",電話:" + b + ",生日:" + c + ",性別:" + d);
+        }
+        function Button5_onclick() {
+            var a = Array();
+            for (i = 1; i <= 110; i++) {
+                a.push(i.toString() + "歲");
+            }
+
+
+            var x = document.getElementById("年齡");
+
+            var i;
+            for (i = 0; i < 110; i++) {
+                var option = document.createElement("option");
+                option.text = a[i];
+                x.add(option);
+            }
+
+        }
+
+        function Button6_onclick() {
+            var i;
+            for (i = 1; i < 8; i++) {
+                var x = document.getElementById("aaa" + i.toString()).checked;
+
+                alert(x);
+            }
+
+
+        }</script>
+    <form id="orderForm1" action="http://203.64.84.113/x/RQ_RS.aspx" method="post" name="form1">
+        <table>
+            
+            <tr>
+                <th>
+                    <h1 style="background-color: hsl(0, 20%, 50%); color: White; text-align: center;">入院護理評估單</h1>
+                    <h2 style="background-color: hsl(0, 0%, 50%); color: White; text-align: center;">身體評估單</h2>
+                </th>
+                <th>
+                    <table id="t01">
+                        <tr>
+                            <th>
+                                護理人員:<input id="j01" type="text" name="護理人員" size="10">
+                            </th>
+                            <th>
+                                姓名:<input id="j02" type="text" name="姓名" size="10">
+                                <input type="radio" name="性別" value="male">男
+
+
+
+                                <input type="radio" name="性別" value="female">女
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                日期:<input type="text" name="日期" size="10"><br>
+                                時間:<input type="text" name="時間" size="10">
+                            </td>
+                            <td>
+                                病歷號碼:<input type="text" name="病歷號碼" size="10"><br>
+                                床號:<input type="text" name="床號" size="10">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                電話:<input id="j03" type="text" name="電話" size="10"><br>
+                                地址:<input type="text" name="地址" size="10"><br>
+                                <button type="button" onclick="Button1_onclick()">檢查</button>
+                                <button type="button" onclick="Button2_onclick()">給值</button>
+                                <button type="button" onclick="Button3_onclick()">呈現</button>
+                            </td>
+                            <td>
+                                生日:
+
+
+
+                                <input id="j04" type="date" name="生日" max="2018-12-31"><br>
+                                年齡:
+
+
+                                <select id="年齡">
+                                    <!--<option value="1歲">
+                                    <option value="2歲">
+                                    <option value="3歲">
+                                    <option value="4歲">
+                                    <option value="5歲">
+                                    <option value="6歲">
+                                    <option value="7歲">
+                                    <option value="8歲">
+                                    <option value="9歲">
+                                    <option value="10歲">
+                                    <option value="11歲">
+                                    <option value="12歲">
+                                    <option value="13歲">
+                                    <option value="14歲">
+                                    <option value="15歲">
+                                    <option value="16歲">
+                                    <option value="17歲">
+                                    <option value="18歲">
+                                    <option value="19歲">
+                                    <option value="20歲">
+                                    <option value="21歲">
+                                    <option value="22歲">
+                                    <option value="23歲">
+                                    <option value="24歲">
+                                    <option value="25歲">
+                                    <option value="26歲">
+                                    <option value="27歲">
+                                    <option value="28歲">
+                                    <option value="29歲">
+                                    <option value="30歲">
+                                    <option value="31歲">
+                                    <option value="32歲">
+                                    <option value="33歲">
+                                    <option value="34歲">
+                                    <option value="35歲">
+                                    <option value="36歲">
+                                    <option value="37歲">
+                                    <option value="38歲">
+                                    <option value="39歲">
+                                    <option value="40歲">
+                                    <option value="41歲">
+                                    <option value="42歲">
+                                    <option value="43歲">
+                                    <option value="44歲">
+                                    <option value="45歲">
+                                    <option value="46歲">
+                                    <option value="47歲">
+                                    <option value="48歲">
+                                    <option value="49歲">
+                                    <option value="50歲">
+                                    <option value="51歲">
+                                    <option value="52歲">
+                                    <option value="53歲">
+                                    <option value="54歲">
+                                    <option value="55歲">
+                                    <option value="56歲">
+                                    <option value="57歲">
+                                    <option value="58歲">
+                                    <option value="59歲">
+                                    <option value="60歲">
+                                    <option value="61歲">
+                                    <option value="62歲">
+                                    <option value="63歲">
+                                    <option value="64歲">
+                                    <option value="65歲">
+                                    <option value="66歲">
+                                    <option value="67歲">
+                                    <option value="68歲">
+                                    <option value="69歲">
+                                    <option value="70歲">
+                                    <option value="71歲">
+                                    <option value="72歲">
+                                    <option value="73歲">
+                                    <option value="74歲">
+                                    <option value="75歲">
+                                    <option value="76歲">
+                                    <option value="77歲">
+                                    <option value="78歲">
+                                    <option value="79歲">
+                                    <option value="80歲">
+                                    <option value="81歲">
+                                    <option value="82歲">
+                                    <option value="83歲">
+                                    <option value="84歲">
+                                    <option value="85歲">
+                                    <option value="86歲">
+                                    <option value="87歲">
+                                    <option value="88歲">
+                                    <option value="89歲">
+                                    <option value="90歲">
+                                    <option value="91歲">
+                                    <option value="92歲">
+                                    <option value="93歲">
+                                    <option value="94歲">
+                                    <option value="95歲">
+                                    <option value="96歲">
+                                    <option value="97歲">
+                                    <option value="98歲">
+                                    <option value="99歲">
+                                    <option value="100歲">
+                                    <option value="101歲">
+                                    <option value="102歲">
+                                    <option value="103歲">
+                                    <option value="104歲">
+                                    <option value="105歲">
+                                    <option value="106歲">
+                                    <option value="107歲">
+                                    <option value="108歲">
+                                    <option value="109歲">
+                                    <option value="110歲">-->
+                                </select>
+
+                            </td>
+                        </tr>
+                    </table>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>BMI</legend>
+                        身高(cm):<input id="v1" type="text" name="身高" size="10" value=""><br>
+                        體重(kg):<input id="v2" type="text" name="體重" size="10" value=""><br>
+                        <button type="button" onclick="Button4_onclick()">BMI</button>
+                        <script>function Button4_onclick() {
+                                var h = parseFloat(document.getElementById("v1").value);
+                                var w = parseFloat(document.getElementById("v2").value);
+                                if (h == "") {
+                                    alert("你尚未填寫身高");
+                                } else if (w == "") {
+                                    alert("你尚未填寫體重");
+                                } else if (isNaN(h)) {
+
+                                    alert("身高不是數字");
+                                } else if (isNaN(w)) {
+                                    alert("體重不是數字");
+                                } else {
+                                    var h2;
+                                    h2 = h / 100;
+                                    h2 = h2 * h2;
+                                    var BMI;
+                                    BMI = w / h2;
+                                    alert("BMI:" + BMI);
+                                }
+
+                            }</script>
+                    </fieldset>
+                    <fieldset>
+                        <legend>生命徵象/管路</legend>
+                        入院來源:<br>
+                        <input type="radio" name="入院來源" value="急診">急診
+
+
+
+                        <input type="radio" name="入院來源" value="門診">
+                        門診
+
+
+
+                        <input type="radio" name="入院來源" value="其他">其他<br>
+                        各類管路:<br>
+                        <input type="checkbox" name="各類管路1" id="aaa1" value="無">
+                        無
+
+
+
+                        <input type="checkbox" name="各類管路2" id="aaa2" value="有">有
+
+
+
+                        <input type="checkbox" name="各類管路3" id="aaa3" value="IV">IV
+
+
+
+                        <input type="checkbox" name="各類管路4" id="aaa4" value="Artery line">
+                        Artery line
+
+
+
+                        <input type="checkbox" name="各類管路5" id="aaa5" value="CVP line">
+                        CVP line<br>
+                        <input type="checkbox" name="各類管路6" id="aaa6" value="Chest tube">
+                        Chest tube
+
+
+
+                        <input type="checkbox" name="各類管路7" id="aaa7" value="其他">其他<br>
+                        <button type="button" onclick="Button6_onclick()">checkbox呈現</button>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>眼</legend>
+                        外觀:<br>
+                        <input type="radio" name="眼外觀" value="正常">正常
+
+
+
+                        <input type="radio" name="眼外觀" value="異常">
+                        異常
+
+
+
+                        <input type="radio" name="眼外觀" value="其他">其他<br>
+                        視力:<br>
+                        左眼
+
+
+
+                        <input type="checkbox" name="左視力1" value="清晰">
+                        清晰
+
+
+
+                        <input type="checkbox" name="左視力2" value="老花">老花
+
+
+
+                        <input type="checkbox" name="左視力3" value="近(遠)視">近(遠)視
+
+
+
+                        <input type="checkbox" name="左視力4" value="白內障">
+                        白內障
+
+
+
+                        <input type="checkbox" name="左視力5" value="其他">
+                        其他<br>
+                        右眼
+
+
+
+                        <input type="checkbox" name="右視力1" value="清晰">
+                        清晰
+
+
+
+                        <input type="checkbox" name="右視力2" value="老花">老花
+
+
+
+                        <input type="checkbox" name="右視力3" value="近(遠)視">近(遠)視
+
+
+
+                        <input type="checkbox" name="右視力4" value="白內障">
+                        白內障
+
+
+
+                        <input type="checkbox" name="右視力5" value="其他">
+                        其他<br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>耳</legend>
+                        外觀:<br>
+                        <input type="radio" name="耳外觀" value="正常">正常
+
+
+
+                        <input type="radio" name="耳外觀" value="異常">異常
+
+
+
+                        <input type="radio" name="耳外觀" value="其他">其他<br>
+                        聽力:<br>
+                        左耳
+
+
+
+                        <input type="checkbox" name="左聽力1" value="清晰">
+                        清晰
+
+
+
+                        <input type="checkbox" name="左聽力2" value="重聽">重聽
+
+
+
+                        <input type="checkbox" name="左聽力3" value="耳鳴">耳鳴
+
+
+
+                        <input type="checkbox" name="左聽力4" value="助聽器">
+                        助聽器
+
+
+
+                        <input type="checkbox" name="左聽力5" value="其他">
+                        其他<br>
+                        右耳
+
+
+
+                        <input type="checkbox" name="右聽力1" value="清晰">
+                        清晰
+
+
+
+                        <input type="checkbox" name="右聽力2" value="重聽">重聽
+
+
+
+                        <input type="checkbox" name="右聽力3" value="耳鳴">耳鳴
+
+
+
+                        <input type="checkbox" name="右聽力4" value="助聽器">
+                        助聽器
+
+
+
+                        <input type="checkbox" name="右聽力5" value="其他">
+                        其他<br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>鼻</legend>
+                        外觀:<br>
+                        <input type="radio" name="鼻外觀" value="正常">正常
+
+
+
+                        <input type="radio" name="鼻外觀" value="異常">
+                        異常
+
+
+
+                        <input type="radio" name="鼻外觀" value="其他">
+                        其他<br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>口</legend>
+                        黏膜:<br>
+                        <input type="checkbox" name="黏膜1" value="正常">
+                        正常
+
+
+
+                        <input type="checkbox" name="黏膜2" value="破損">破損
+
+
+
+                        <input type="checkbox" name="黏膜3" value="潰傷">潰傷
+
+
+
+                        <input type="checkbox" name="黏膜4" value="其他">
+                        其他
+
+
+
+                        <br>
+                        輔助物:<br>
+                        <input type="radio" name="輔助物" value="無">無
+
+
+
+                        <input type="radio" name="輔助物" value="固定假牙">固定假牙
+
+
+
+                        <input type="radio" name="輔助物" value="活動假牙">活動假牙
+
+
+
+                        <input type="radio" name="輔助物" value="其他">
+                        其他
+
+
+
+                        <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>頸</legend>
+                        外觀:<br>
+                        <input type="radio" name="頸外觀" value="正常">正常
+
+
+
+                        <input type="radio" name="頸外觀" value="異常">
+                        異常
+
+
+
+                        <input type="radio" name="頸外觀" value="其他">
+                        其他
+
+
+                    </fieldset>
+
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>皮膚</legend>
+                        <img src="http://www.xinghengedu.com/u/cms/www/201611/08104023xvff.png" width="400" height="400"><br>
+                        皮膚外貌:<br>
+                        部位:
+
+
+
+                        <input list="皮膚外貌部位1" name="皮膚外貌部位1">
+                        <datalist id="皮膚外貌部位1">
+                            <option value="頭">
+                            <option value="頸">
+                            <option value="面">
+                            <option value="背">
+                            <option value="腰">
+                            <option value="左臀">
+                            <option value="右臀">
+                            <option value="左胸">
+                            <option value="右胸">
+                            <option value="左腹">
+                            <option value="右腹">
+                            <option value="左肩">
+                            <option value="右肩">
+                            <option value="左上臂">
+                            <option value="右上臂">
+                            <option value="左手肘">
+                            <option value="右手肘">
+                            <option value="左前臂">
+                            <option value="右前臂">
+                            <option value="左手腕">
+                            <option value="右手腕">
+                            <option value="左手">
+                            <option value="右手">
+                            <option value="左大腿">
+                            <option value="右大腿">
+                            <option value="左膝">
+                            <option value="右膝">
+                            <option value="左小腿">
+                            <option value="右小腿">
+                            <option value="左腳踝">
+                            <option value="右腳踝">
+                            <option value="左腳掌">
+                            <option value="右腳掌">
+                        </datalist>
+                        <br>
+                        症狀:
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位1症狀1" value="正常">
+                        正常
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位1症狀2" value="乾燥">蒼白
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位1症狀3" value="潮紅">黃疸
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位1症狀4" value="淤斑">淤斑
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位1症狀5" value="其他">
+                        其他<br>
+                        部位:
+
+
+
+                        <input list="皮膚外貌部位2" name="皮膚外貌部位2">
+                        <datalist id="皮膚外貌部位2">
+                            <option value="頭">
+                            <option value="頸">
+                            <option value="面">
+                            <option value="背">
+                            <option value="腰">
+                            <option value="左臀">
+                            <option value="右臀">
+                            <option value="左胸">
+                            <option value="右胸">
+                            <option value="左腹">
+                            <option value="右腹">
+                            <option value="左肩">
+                            <option value="右肩">
+                            <option value="左上臂">
+                            <option value="右上臂">
+                            <option value="左手肘">
+                            <option value="右手肘">
+                            <option value="左前臂">
+                            <option value="右前臂">
+                            <option value="左手腕">
+                            <option value="右手腕">
+                            <option value="左手">
+                            <option value="右手">
+                            <option value="左大腿">
+                            <option value="右大腿">
+                            <option value="左膝">
+                            <option value="右膝">
+                            <option value="左小腿">
+                            <option value="右小腿">
+                            <option value="左腳踝">
+                            <option value="右腳踝">
+                            <option value="左腳掌">
+                            <option value="右腳掌">
+                        </datalist>
+                        <br>
+                        症狀:
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位2症狀1" value="正常">
+                        正常
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位2症狀2" value="乾燥">蒼白
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位2症狀3" value="潮紅">黃疸
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位2症狀4" value="淤斑">淤斑
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位2症狀5" value="其他">
+                        其他<br>
+                        部位:
+
+
+
+                        <input list="皮膚外貌部位3" name="皮膚外貌部位3">
+                        <datalist id="皮膚外貌部位3">
+                            <option value="頭">
+                            <option value="頸">
+                            <option value="面">
+                            <option value="背">
+                            <option value="腰">
+                            <option value="左臀">
+                            <option value="右臀">
+                            <option value="左胸">
+                            <option value="右胸">
+                            <option value="左腹">
+                            <option value="右腹">
+                            <option value="左肩">
+                            <option value="右肩">
+                            <option value="左上臂">
+                            <option value="右上臂">
+                            <option value="左手肘">
+                            <option value="右手肘">
+                            <option value="左前臂">
+                            <option value="右前臂">
+                            <option value="左手腕">
+                            <option value="右手腕">
+                            <option value="左手">
+                            <option value="右手">
+                            <option value="左大腿">
+                            <option value="右大腿">
+                            <option value="左膝">
+                            <option value="右膝">
+                            <option value="左小腿">
+                            <option value="右小腿">
+                            <option value="左腳踝">
+                            <option value="右腳踝">
+                            <option value="左腳掌">
+                            <option value="右腳掌">
+                        </datalist>
+                        <br>
+                        症狀:
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位3症狀1" value="正常">
+                        正常
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位3症狀2" value="乾燥">蒼白
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位3症狀3" value="潮紅">黃疸
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位3症狀4" value="淤斑">淤斑
+
+
+
+                        <input type="checkbox" name="皮膚外貌部位3症狀5" value="其他">
+                        其他<br>
+                        皮膚完整:<br>
+                        部位:
+
+
+
+                        <input list="皮膚完整部位1" name="皮膚完整部位1">
+                        <datalist id="皮膚完整部位1">
+                            <option value="頭">
+                            <option value="頸">
+                            <option value="面">
+                            <option value="背">
+                            <option value="腰">
+                            <option value="左臀">
+                            <option value="右臀">
+                            <option value="左胸">
+                            <option value="右胸">
+                            <option value="左腹">
+                            <option value="右腹">
+                            <option value="左肩">
+                            <option value="右肩">
+                            <option value="左上臂">
+                            <option value="右上臂">
+                            <option value="左手肘">
+                            <option value="右手肘">
+                            <option value="左前臂">
+                            <option value="右前臂">
+                            <option value="左手腕">
+                            <option value="右手腕">
+                            <option value="左手">
+                            <option value="右手">
+                            <option value="左大腿">
+                            <option value="右大腿">
+                            <option value="左膝">
+                            <option value="右膝">
+                            <option value="左小腿">
+                            <option value="右小腿">
+                            <option value="左腳踝">
+                            <option value="右腳踝">
+                            <option value="左腳掌">
+                            <option value="右腳掌">
+                        </datalist>
+                        <br>
+                        症狀:
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀1" value="完整">完整
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀2" value="紅疹">紅疹
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀3" value="腫脹">腫脹
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀4" value="水泡">水泡
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀5" value="破皮">破皮
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀6" value="傷口">傷口
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀7" value="壞死">壞死
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀8" value="壓瘡">壓瘡
+
+
+
+                        <input type="checkbox" name="皮膚完整部位1症狀9" value="其他">
+                        其他<br>
+                        部位:
+
+
+
+                        <input list="皮膚完整部位2" name="皮膚完整部位2">
+                        <datalist id="皮膚完整部位2">
+                            <option value="頭">
+                            <option value="頸">
+                            <option value="面">
+                            <option value="背">
+                            <option value="腰">
+                            <option value="左臀">
+                            <option value="右臀">
+                            <option value="左胸">
+                            <option value="右胸">
+                            <option value="左腹">
+                            <option value="右腹">
+                            <option value="左肩">
+                            <option value="右肩">
+                            <option value="左上臂">
+                            <option value="右上臂">
+                            <option value="左手肘">
+                            <option value="右手肘">
+                            <option value="左前臂">
+                            <option value="右前臂">
+                            <option value="左手腕">
+                            <option value="右手腕">
+                            <option value="左手">
+                            <option value="右手">
+                            <option value="左大腿">
+                            <option value="右大腿">
+                            <option value="左膝">
+                            <option value="右膝">
+                            <option value="左小腿">
+                            <option value="右小腿">
+                            <option value="左腳踝">
+                            <option value="右腳踝">
+                            <option value="左腳掌">
+                            <option value="右腳掌">
+                        </datalist>
+                        <br>
+                        症狀:
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀1" value="完整">完整
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀2" value="紅疹">紅疹
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀3" value="腫脹">腫脹
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀4" value="水泡">水泡
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀5" value="破皮">破皮
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀6" value="傷口">傷口
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀7" value="壞死">壞死
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀8" value="壓瘡">壓瘡
+
+
+
+                        <input type="checkbox" name="皮膚完整部位2症狀9" value="其他">
+                        其他<br>
+                        部位:
+
+
+
+                        <input list="皮膚完整部位3" name="皮膚完整部位3">
+                        <datalist id="皮膚完整部位3">
+                            <option value="頭">
+                            <option value="頸">
+                            <option value="面">
+                            <option value="背">
+                            <option value="腰">
+                            <option value="左臀">
+                            <option value="右臀">
+                            <option value="左胸">
+                            <option value="右胸">
+                            <option value="左腹">
+                            <option value="右腹">
+                            <option value="左肩">
+                            <option value="右肩">
+                            <option value="左上臂">
+                            <option value="右上臂">
+                            <option value="左手肘">
+                            <option value="右手肘">
+                            <option value="左前臂">
+                            <option value="右前臂">
+                            <option value="左手腕">
+                            <option value="右手腕">
+                            <option value="左手">
+                            <option value="右手">
+                            <option value="左大腿">
+                            <option value="右大腿">
+                            <option value="左膝">
+                            <option value="右膝">
+                            <option value="左小腿">
+                            <option value="右小腿">
+                            <option value="左腳踝">
+                            <option value="右腳踝">
+                            <option value="左腳掌">
+                            <option value="右腳掌">
+                        </datalist>
+                        <br>
+                        症狀:
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀1" value="完整">完整
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀2" value="紅疹">紅疹
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀3" value="腫脹">腫脹
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀4" value="水泡">水泡
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀5" value="破皮">破皮
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀6" value="傷口">傷口
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀7" value="壞死">壞死
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀8" value="壓瘡">壓瘡
+
+
+
+                        <input type="checkbox" name="皮膚完整部位3症狀9" value="其他">
+                        其他<br>
+                    </fieldset>
+                    <button type="submit" value="sssss" onclick="Submit_onclick()" style="height: 29px; width: 103px">送出</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
