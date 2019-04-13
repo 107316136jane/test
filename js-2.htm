@@ -89,14 +89,22 @@
         }
 
         function Button6_onclick() {
-            a = document.getElementsByName("各類管路");
-            var x=" ";
-            for (i = 0; i < 7; i++) {
-                if (a[i].checked == true)
-                x += a[i].value;
-            }
+            for (i = 0;i < 7;i++) {
+                var table = document.getElementById("myTable");
 
-            alert(x);
+
+                var cb = document.getElementById("sss" + (i + 1).toString());
+                if (cb.checked) {
+                    var row = table.insertRow(-1);
+                    var c1 = row.insertCell(0);
+                    var c2 = row.insertCell(1);
+                    c1.innerHTML = cb.id;
+                    c2.innerHTML = cb.value;
+                }
+
+
+            }
+            
         }
 
 </script>
@@ -313,34 +321,35 @@
 
                         <input type="radio" name="入院來源" value="其他">其他<br>
                         各類管路:<br>
-                        <input type="checkbox" name="各類管路" value="無">
+                        <input type="checkbox" id ="sss1" name="各類管路" value="無">
                         無
 
 
 
-                        <input type="checkbox" name="各類管路" value="有">有
+                        <input type="checkbox" id ="sss2"name="各類管路" value="有">有
 
 
 
-                        <input type="checkbox" name="各類管路" value="IV">IV
+                        <input type="checkbox" id ="sss3" name="各類管路" value="IV">IV
 
 
 
-                        <input type="checkbox" name="各類管路" value="Artery line">
+                        <input type="checkbox" id ="sss4" name="各類管路" value="Artery line">
                         Artery line
 
 
 
-                        <input type="checkbox" name="各類管路" value="CVP line">
+                        <input type="checkbox" id ="sss5" name="各類管路" value="CVP line">
                         CVP line<br>
-                        <input type="checkbox" name="各類管路" value="Chest tube">
+                        <input type="checkbox" id ="sss6" name="各類管路" value="Chest tube">
                         Chest tube
 
 
 
-                        <input type="checkbox" name="各類管路" id="aaa7" value="其他">其他<br>
+                        <input type="checkbox" id ="sss7" name="各類管路" id="aaa7" value="其他">其他<br>
                         <button type="button" onclick="Button6_onclick()">checkbox呈現</button>
-                    </fieldset>
+                        <table id="myTable"> </table>
+</fieldset>
 
                     <fieldset>
                         <legend>眼</legend>
